@@ -134,6 +134,7 @@ Efficient requestAnimationFrame loop for Canvas rendering
 useTransition for smooth state updates
 
 Time-series data aggregation to reduce render load
+---
 
 ### Future Enhancements
 
@@ -144,6 +145,7 @@ Enable persistent caching with Service Workers
 Integrate WebSocket streaming for live IoT data
 
 Add testing with Jest and React Testing Library
+
 
 
 
