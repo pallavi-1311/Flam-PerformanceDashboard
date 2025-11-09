@@ -81,8 +81,8 @@ Observe the FPS (frames per second) and memory usage for 30–60 seconds.
 
 
 ## Expected Results:
-<img width="1906" height="874" alt="image" src="https://github.com/user-attachments/assets/3efb5a95-09b4-4c31-a465-ffa67982359e" />
 ## Line Chart (High-Frequency Stream)
+<img width="1906" height="874" alt="image" src="https://github.com/user-attachments/assets/3efb5a95-09b4-4c31-a465-ffa67982359e" />
 
 The high-frequency line chart processes ~2,500 streaming points in real time with 0.36 ms render time and perfect 60 FPS, validating the dashboard’s responsive architecture.
 <img width="1905" height="874" alt="image" src="https://github.com/user-attachments/assets/dfe2020d-f682-4907-9d30-0e892228d3bf" />
@@ -144,6 +144,7 @@ Enable persistent caching with Service Workers
 Integrate WebSocket streaming for live IoT data
 
 Add testing with Jest and React Testing Library
+
 
 
 
