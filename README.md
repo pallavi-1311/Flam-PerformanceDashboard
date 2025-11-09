@@ -120,7 +120,6 @@ performance-dashboard/
 ├── next.config.js
 ├── README.md
 └── PERFORMANCE.md
----
 
 ##Advanced Next.js Features Implemented
 
@@ -158,6 +157,7 @@ Enable persistent caching with Service Workers
 Integrate WebSocket streaming for live IoT data
 
 Add testing with Jest and React Testing Library
+
 
 
 
