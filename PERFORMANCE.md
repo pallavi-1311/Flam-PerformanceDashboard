@@ -25,18 +25,17 @@ In order to reach and sustain a rate of **60 FPS**, a number of frontend and ren
 - Applied **`React.memo`** to heavy visual components like `LineChart`, `BarChart`, and `Heatmap`.
 
 ###  **Canvas Rendering Optimization**
-- Replaced traditional React DOM rendering with **HTML5 Canvas** for performance-critical visual updates.  
-- Utilized **`requestAnimationFrame`** for smooth 60 FPS animation loop.  
-- Batched drawing operations (multiple points rendered in a single context frame).
-
+- Replaced traditional React DOM rendering with **HTML5 Canvas ** for performance-critical visual updates.
+- Utilized **`requestAnimationFrame`** for a smooth 60 FPS animation loop.  
+- Batched drawing operations - several points rendered in one context frame.
 ###  **Efficient Data Flow**
-- Implemented **`Web Workers`** for background data generation to prevent UI blocking.  
-- Used **`OffscreenCanvas`** (with fallback to 2D context) to parallelize rendering on supported browsers.  
+- Implemented **`Web Workers`** to generate data in the background and prevent UI blocking.
+- Used **`OffscreenCanvas`** with fallback to 2D context to parallelize the rendering in browsers that support it.
 - Added **time-based data aggregation (1min / 5min / 1hour)** to reduce data density in large windows.
 
 ###  **Virtual Scrolling & Lazy Updates**
-- DataTable uses **virtualized scrolling** to handle large datasets efficiently without full DOM rendering.  
-- Only visible rows are rendered dynamically, reducing memory and reflow costs.
+- DataTable uses **virtualized scrolling** for efficient handling of large datasets without full DOM rendering.  
+- Only visible rows will be dynamically rendered, minimizing memory and reflow overheads.
 
 ---
 
@@ -51,7 +50,7 @@ In order to reach and sustain a rate of **60 FPS**, a number of frontend and ren
 | **Aggregation Strategy** | Time-based bucketing | Reduces render load and improves visual clarity under large datasets. |
 
 > **Why Canvas over SVG for core charts:**  
-> SVG becomes inefficient beyond ~5,000 elements due to DOM overhead, while Canvas can efficiently handle **100,000+ points** using a single draw loop.
+> SVG is ineffective after about 5 thousand elements thanks to the overhead of a DOM and Canvas can draw many more points efficiently, more than 100 thousand points, with a single loop.
 
 ---
 
@@ -78,7 +77,7 @@ In order to reach and sustain a rate of **60 FPS**, a number of frontend and ren
 As data volume increases, these strategies ensure scalability beyond 100,000+ points:
 
 ###  **Algorithmic Scaling**
-- **Dynamic Downsampling:** Reduces data density by averaging consecutive samples when total points exceed 100k.  
+- **Dynamic Downsampling:** When the total number of points is more than 100k, it averages the successive samples.  
 - **Windowed Rendering:** Renders only visible time window (e.g., last 10k points) instead of full dataset.  
 
 ###  **Architectural Scaling**
@@ -90,14 +89,14 @@ As data volume increases, these strategies ensure scalability beyond 100,000+ po
 - Enable **Next.js Edge Middleware** for caching aggregated data.  
 - Integrate **WebSockets** for true live-streaming scalability.
 
->  With these strategies, the system design can be extended to handle **100k–1M data points** while maintaining sub-100ms latency and ~60 FPS rendering.
+> These strategies make the system design capable of working with **100k-1M** data points at a sub-100ms latency and the performance of about 60 FPS rendering.
 
 ---
 
 ##  **Conclusion**
 
-The **Performance Dashboard** consistently achieves real-time, high-frequency data visualization goals through a combination of **Canvas-based rendering**, **asynchronous processing**, and **reactive state optimization**.  
-Testing results confirm stable **60 FPS**, smooth interactivity, and efficient scaling behavior across all chart modes.
+The Performance Dashboard is able to meet high-frequency and real-time data visualization requirements all the time by using a combination of Canvas-based rendering, asynchronous processing, and reactive state optimization.
+The results of the testing prove stable 60 FPS, interactivity, and performance of scaling of all chart modes.
 
 ---
 
@@ -106,6 +105,7 @@ Testing results confirm stable **60 FPS**, smooth interactivity, and efficient s
 **Deployed Demo:** https://flam-performance-dashboard-o633.vercel.app/dashboard
 
 ---
+
 
 
 
