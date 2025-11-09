@@ -57,7 +57,7 @@ npm run build
 npm start
 ##🧪 Performance Testing Instructions
 
-Run the app using npm run dev.
+###Run the app using npm run dev.
 
 Open it in Google Chrome.
 
@@ -141,6 +141,7 @@ Enable persistent caching with Service Workers
 Integrate WebSocket streaming for live IoT data
 
 Add testing with Jest and React Testing Library
+
 
 
 
