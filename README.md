@@ -40,19 +40,19 @@ It can smoothly render and update **10,000+ data points at 60 FPS**, optimized f
 
 ##  Setup & Installation
 
-### 1 Clone the project
+### 1) Clone the project
 
 git clone https://github.com/your-username/performance-dashboard.git
 cd performance-dashboard
-2 Install dependencies
+### 2)Install dependencies
 npm install
-3 Run the development server
+### 30 Run the development server
 npm run dev
 
 
 ➡ Open http://localhost:3000/dashboard
 
-4 Build for production
+### 4) Build for production
 npm run build
 npm start
 
@@ -112,6 +112,7 @@ Enable persistent caching with Service Workers
 Integrate WebSocket streaming for live IoT data
 
 Add testing with Jest and React Testing Library
+
 
 
 
