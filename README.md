@@ -55,6 +55,25 @@ npm run dev
 4️⃣ Build for production
 npm run build
 npm start
+🧪 Performance Testing Instructions
+
+Run the app using npm run dev.
+
+Open it in Google Chrome.
+
+Go to DevTools → Performance Tab → Record.
+
+Interact with the dashboard or enable “Stress Mode” from the control panel.
+
+Observe the FPS (frames per second) and memory usage for 30–60 seconds.
+
+Expected Results:
+
+✅ Maintain ~60 FPS during real-time updates
+
+✅ Memory usage below 250 MB during extended runs
+
+💡 Tip: Disable browser extensions or background tabs for more accurate measurements.
 
 📁 File Structure
 performance-dashboard/
@@ -123,7 +142,6 @@ Integrate WebSocket streaming for live IoT data
 
 Add testing with Jest and React Testing Library
 
-🧾 License
 
-This project is for educational and performance evaluation purposes only.
+
 
