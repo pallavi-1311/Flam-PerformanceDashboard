@@ -42,7 +42,7 @@ It can smoothly render and update **10,000+ data points at 60 FPS**, optimized f
 
 ### 1) Clone the project
 
-git clone https://github.com/your-username/performance-dashboard.git
+git clone (https://github.com/pallavi-1311/Flam-PerformanceDashboard).git
 cd performance-dashboard
 ### 2)Install dependencies
 npm install
@@ -112,6 +112,7 @@ Enable persistent caching with Service Workers
 Integrate WebSocket streaming for live IoT data
 
 Add testing with Jest and React Testing Library
+
 
 
 
