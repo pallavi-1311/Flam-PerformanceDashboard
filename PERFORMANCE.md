@@ -100,11 +100,12 @@ The results of the testing prove stable 60 FPS, interactivity, and performance o
 
 ---
 
-**Author:** Pallavi  
+**Author:** Pallavi Kasam
 **GitHub:** https://github.com/pallavi-1311
 **Deployed Demo:** https://flam-performance-dashboard-o633.vercel.app/dashboard
 
 ---
+
 
 
 
