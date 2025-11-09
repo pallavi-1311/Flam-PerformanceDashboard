@@ -55,8 +55,8 @@ npm run dev
 4 Build for production
 npm run build
 npm start
----
-##  Performance Testing InstructionsClone the projec
+
+##  Performance Testing InstructionsClone the project
 
 ### Run the app using npm run dev.
 
@@ -112,6 +112,7 @@ Enable persistent caching with Service Workers
 Integrate WebSocket streaming for live IoT data
 
 Add testing with Jest and React Testing Library
+
 
 
 
