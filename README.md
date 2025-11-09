@@ -64,9 +64,8 @@ Open it in Google Chrome.
 
 Go to DevTools → Performance Tab → Record.
 
-Interact with the dashboard or enable “Stress Mode” from the control panel.
-
 Observe the FPS (frames per second) and memory usage for 30–60 seconds.
+
 ---
 ##  Browser Compatibility
 
@@ -145,6 +144,7 @@ Enable persistent caching with Service Workers
 Integrate WebSocket streaming for live IoT data
 
 Add testing with Jest and React Testing Library
+
 
 
 
