@@ -18,7 +18,7 @@
 
 ##  **2. Optimization Techniques**
 
-To achieve and maintain **60 FPS**, several frontend and rendering optimizations were applied:
+In order to reach and sustain a rate of **60 FPS**, a number of frontend and rendering optimization were done:
 
 ###  **React & State Management**
 - Used **`useMemo`** and **`useCallback`** to prevent unnecessary re-renders of chart and control components.  
@@ -106,6 +106,7 @@ Testing results confirm stable **60 FPS**, smooth interactivity, and efficient s
 **Deployed Demo:** https://flam-performance-dashboard-o633.vercel.app/dashboard
 
 ---
+
 
 
 
