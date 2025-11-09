@@ -78,17 +78,20 @@ export default function DashboardPage() {
         flexDirection: 'column',
         gap: '20px'
       }}>
-        <FilterPanel
-          isStreaming={isStreaming}
-          aggregation={aggregation}
-          chartType={chartType}
-          onToggleStreaming={toggleStreaming}
-          onIncreaseLoad={increaseDataLoad}
-          onDecreaseLoad={decreaseDataLoad}
-          onReset={resetData}
-          onAggregationChange={setAggregation}
-          onChartTypeChange={setChartType}
-        />
+            <FilterPanel
+      isStreaming={isStreaming}
+      aggregation={aggregation}
+      chartType={chartType}
+      onToggleStreaming={toggleStreaming}
+      onIncreaseLoad={increaseDataLoad}
+      onDecreaseLoad={decreaseDataLoad}
+      onReset={resetData}
+      onAggregationChange={setAggregation}
+      onChartTypeChange={setChartType}
+      timeRange="1min"                      // ✅ temporary default value
+      onTimeRangeChange={() => {}}          // ✅ empty callback
+    />
+
         <PerformanceMonitor metrics={metrics} />
       </aside>
       
