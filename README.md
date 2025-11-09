@@ -40,19 +40,19 @@ It can smoothly render and update **10,000+ data points at 60 FPS**, optimized f
 
 ## ⚙️ Setup & Installation
 
-### 1️⃣ Clone the project
+### 1 Clone the project
 
 git clone https://github.com/your-username/performance-dashboard.git
 cd performance-dashboard
-2️⃣ Install dependencies
+2 Install dependencies
 npm install
-3️⃣ Run the development server
+3 Run the development server
 npm run dev
 
 
 ➡ Open http://localhost:3000/dashboard
 
-4️⃣ Build for production
+4 Build for production
 npm run build
 npm start
 ---
@@ -68,15 +68,14 @@ Interact with the dashboard or enable “Stress Mode” from the control panel.
 
 Observe the FPS (frames per second) and memory usage for 30–60 seconds.
 
-Expected Results:
+## Expected Results:
 
-✅ Maintain ~60 FPS during real-time updates
+1 Maintain ~60 FPS during real-time updates
 
-✅ Memory usage below 250 MB during extended runs
+2 Memory usage below 250 MB during extended runs
 
-💡 Tip: Disable browser extensions or background tabs for more accurate measurements.
-
-📁 File Structure
+---
+### File Structure
 performance-dashboard/
 ├── app/
 │   ├── dashboard/
@@ -98,22 +97,24 @@ performance-dashboard/
 ├── next.config.js
 ├── README.md
 └── PERFORMANCE.md
+---
 
-🧩 Advanced Next.js Features Implemented
+##Advanced Next.js Features Implemented
 
-✅ Streaming UI with Suspense boundaries
+1 Streaming UI with Suspense boundaries
 
-✅ Server Actions for data updates
+2 Server Actions for data updates
 
-✅ Edge Middleware for caching and route optimization
+3 Edge Middleware for caching and route optimization
 
-✅ Static Generation for chart configuration
+4 Static Generation for chart configuration
 
-✅ Route Handlers under /api/data/
+5 Route Handlers under /api/data/
 
-✅ Web Workers for async data processing
+6 Web Workers for async data processing
+---
 
-🧠 Optimization Techniques
+### Optimization Techniques
 
 useMemo & useCallback to prevent re-renders
 
@@ -125,15 +126,7 @@ useTransition for smooth state updates
 
 Time-series data aggregation to reduce render load
 
-📸 UI Preview (expected)
-
-Realtime FPS monitor and memory usage
-
-Zoomable and pannable charts
-
-Control panel with data aggregation and streaming toggles
-
-💡 Future Enhancements
+### Future Enhancements
 
 Add dark/light theme support
 
@@ -142,6 +135,7 @@ Enable persistent caching with Service Workers
 Integrate WebSocket streaming for live IoT data
 
 Add testing with Jest and React Testing Library
+
 
 
 
