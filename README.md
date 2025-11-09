@@ -75,7 +75,7 @@ Observe the FPS (frames per second) and memory usage for 30–60 seconds.
 2 Memory usage below 250 MB during extended runs
 
 ---
-### File Structure
+File Structure
 performance-dashboard/
 ├── app/
 │   ├── dashboard/
@@ -135,6 +135,7 @@ Enable persistent caching with Service Workers
 Integrate WebSocket streaming for live IoT data
 
 Add testing with Jest and React Testing Library
+
 
 
 
