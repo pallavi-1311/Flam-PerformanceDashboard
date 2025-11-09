@@ -1,4 +1,4 @@
-// File: C:\Users\palla\Downloads\pallavi-1311-Flam-PerformanceDashboard-main\pallavi-1311-Flam-PerformanceDashboard-main\app\dashboard\layout.tsx
+// File: C:\Users\palla\OneDrive\Desktop\pallavi-1311-Flam-PerformanceDashboard-main\app\dashboard\layout.tsx
 import * as entry from '../../../../app/dashboard/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
