@@ -75,6 +75,29 @@ Observe the FPS (frames per second) and memory usage for 30–60 seconds.
 2 Memory usage below 250 MB during extended runs
 
 ---
+## 📁 File Structure
+
+Flam-PerformanceDashboard/
+├── app/
+│ ├── dashboard/
+│ │ ├── page.tsx
+│ │ └── layout.tsx
+│ ├── api/
+│ │ └── data/route.ts
+│ ├── globals.css
+│ └── layout.tsx
+├── components/
+│ ├── charts/ (LineChart, BarChart, ScatterPlot, Heatmap)
+│ ├── controls/ (FilterPanel, TimeRangeSelector)
+│ ├── ui/ (PerformanceMonitor, DataTable)
+│ └── providers/ (DataProvider)
+├── hooks/ (useDataStream, usePerformanceMonitor, useChartRenderer)
+├── lib/ (dataGenerator, canvasUtils, types)
+├── middleware.ts
+├── public/
+├── next.config.js
+├── README.md
+└── PERFORMANCE.md
 File Structure
 performance-dashboard/
 ├── app/
@@ -135,6 +158,7 @@ Enable persistent caching with Service Workers
 Integrate WebSocket streaming for live IoT data
 
 Add testing with Jest and React Testing Library
+
 
 
 
