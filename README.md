@@ -46,7 +46,7 @@ git clone https://github.com/pallavi-1311/Flam-PerformanceDashboard.git
 cd performance-dashboard
 ### 2)Install dependencies
 npm install
-### 30 Run the development server
+### 3) Run the development server
 npm run dev
 
 
@@ -81,6 +81,7 @@ Observe the FPS (frames per second) and memory usage for 30–60 seconds.
 
 
 ## Expected Results:
+<img width="1906" height="874" alt="image" src="https://github.com/user-attachments/assets/3efb5a95-09b4-4c31-a465-ffa67982359e" />
 
 1) Maintain ~60 FPS during real-time updates
 
@@ -123,6 +124,7 @@ Enable persistent caching with Service Workers
 Integrate WebSocket streaming for live IoT data
 
 Add testing with Jest and React Testing Library
+
 
 
 
