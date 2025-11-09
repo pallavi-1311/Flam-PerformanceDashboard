@@ -79,7 +79,13 @@ function Heatmap({
     };
 
     render();
-    return () => animationFrameRef.current && cancelAnimationFrame(animationFrameRef.current);
+
+    // ✅ FIXED CLEANUP FUNCTION (returns void)
+    return () => {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+    };
   }, [data, scale, offset]);
 
   // 🖱 Zoom + Pan + Tooltip interaction
@@ -97,6 +103,7 @@ function Heatmap({
       setDragging(true);
       setLastPos({ x: e.clientX, y: e.clientY });
     };
+
     const handleMouseMove = (e: MouseEvent) => {
       if (dragging) {
         const dx = e.clientX - lastPos.x;

@@ -75,7 +75,13 @@ function BarChart({
     };
 
     render();
-    return () => animationFrameRef.current && cancelAnimationFrame(animationFrameRef.current);
+
+    // ✅ FIXED CLEANUP FUNCTION
+    return () => {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+    };
   }, [data, scale, offset]);
 
   // Mouse Interaction
@@ -93,6 +99,7 @@ function BarChart({
       setDragging(true);
       setLastPos({ x: e.clientX, y: e.clientY });
     };
+
     const handleMouseMove = (e: MouseEvent) => {
       if (dragging) {
         const dx = e.clientX - lastPos.x;
@@ -115,6 +122,7 @@ function BarChart({
         }
       }
     };
+
     const handleMouseUp = () => setDragging(false);
     const handleMouseLeave = () => {
       setHoverPoint(null);

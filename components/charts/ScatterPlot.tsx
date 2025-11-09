@@ -71,7 +71,13 @@ function ScatterPlot({
     };
 
     render();
-    return () => animationFrameRef.current && cancelAnimationFrame(animationFrameRef.current);
+
+    // ✅ FIXED CLEANUP FUNCTION (TypeScript-safe)
+    return () => {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+    };
   }, [data, scale, offset]);
 
   // 🖱 Zoom + Pan + Tooltip

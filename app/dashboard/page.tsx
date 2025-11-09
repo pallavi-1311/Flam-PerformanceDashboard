@@ -83,16 +83,19 @@ function DashboardInner() {
         }}
       >
         <FilterPanel
-          isStreaming={isStreaming}
-          aggregation={aggregation}
-          chartType={chartType}
-          onToggleStreaming={toggleStreaming}
-          onIncreaseLoad={increaseDataLoad}
-          onDecreaseLoad={decreaseDataLoad}
-          onReset={resetData}
-          onAggregationChange={setAggregation}
-          onChartTypeChange={setChartType}
-        />
+  isStreaming={isStreaming}
+  aggregation={aggregation}
+  chartType={chartType}
+  onToggleStreaming={toggleStreaming}
+  onIncreaseLoad={increaseDataLoad}
+  onDecreaseLoad={decreaseDataLoad}
+  onReset={resetData}
+  onAggregationChange={setAggregation}
+  onChartTypeChange={setChartType}
+  timeRange="1min"
+  onTimeRangeChange={() => {}}
+/>
+
         <PerformanceMonitor
           metrics={{
             ...metrics,

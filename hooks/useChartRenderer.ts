@@ -19,7 +19,7 @@ export function useChartRenderer(
 ) {
   const ctxRef = useRef<CanvasRenderingContext2D | null>(null);
   const animationFrameRef = useRef<number>();
-  const initializedRef = useRef(false); // 🆕 prevents reinitialization
+  const initializedRef = useRef(false);
 
   const [scale, setScale] = useState(1);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
@@ -31,46 +31,29 @@ export function useChartRenderer(
     initializedRef.current = true;
 
     const rect = canvas.getBoundingClientRect();
-
-    // ✅ Set size BEFORE offscreen transfer
     canvas.width = rect.width * window.devicePixelRatio;
     canvas.height = rect.height * window.devicePixelRatio;
 
-    let ctx: CanvasRenderingContext2D | null = null;
-
-    // 🧠 Try using OffscreenCanvas if supported
-    if (canvas.transferControlToOffscreen) {
-      try {
-        const offscreen = canvas.transferControlToOffscreen();
-        ctx = offscreen.getContext('2d');
-        console.log('✅ OffscreenCanvas initialized');
-      } catch (err) {
-        console.warn('⚠️ OffscreenCanvas failed, fallback to 2D context', err);
-        ctx = canvas.getContext('2d');
-      }
-    } else {
-      ctx = canvas.getContext('2d');
-    }
-
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
+
     ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
     ctxRef.current = ctx;
 
     const handleResize = () => {
-      if (!canvas || !ctxRef.current) return;
-      // ✅ Only resize if NOT using OffscreenCanvas
-      if (!canvas.transferControlToOffscreen) {
-        const rect = canvas.getBoundingClientRect();
-        canvas.width = rect.width * window.devicePixelRatio;
-        canvas.height = rect.height * window.devicePixelRatio;
-        ctxRef.current.scale(window.devicePixelRatio, window.devicePixelRatio);
-      }
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width * window.devicePixelRatio;
+      canvas.height = rect.height * window.devicePixelRatio;
+      ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
     };
 
     window.addEventListener('resize', handleResize);
+
     return () => {
       window.removeEventListener('resize', handleResize);
-      if (animationFrameRef.current) cancelAnimationFrame(animationFrameRef.current);
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
     };
   }, [canvasRef]);
 
@@ -121,8 +104,11 @@ export function useChartRenderer(
     };
 
     render();
+
     return () => {
-      if (animationFrameRef.current) cancelAnimationFrame(animationFrameRef.current);
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
     };
   }, [data, onRenderComplete, offset, scale]);
 

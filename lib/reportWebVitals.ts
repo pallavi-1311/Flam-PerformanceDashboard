@@ -1,12 +1,13 @@
-// 🆕 Added: Core Web Vitals Reporting
 export function reportWebVitals() {
-  if (typeof window !== 'undefined' && 'performance' in window) {
-    import('web-vitals').then(({ getCLS, getFID, getLCP, getFCP, getTTFB }) => {
-      getCLS(console.log);
-      getFID(console.log);
-      getLCP(console.log);
-      getFCP(console.log);
-      getTTFB(console.log);
+  if (typeof window !== 'undefined') {
+    // Import loosely typed to avoid TypeScript mismatches
+    import('web-vitals').then((webVitals: any) => {
+      const { onCLS, onFID, onLCP, onFCP, onTTFB } = webVitals;
+      if (onCLS) onCLS(console.log);
+      if (onFID) onFID(console.log);
+      if (onLCP) onLCP(console.log);
+      if (onFCP) onFCP(console.log);
+      if (onTTFB) onTTFB(console.log);
     });
   }
 }
