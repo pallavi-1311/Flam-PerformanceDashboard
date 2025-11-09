@@ -56,7 +56,7 @@ npm run dev
 npm run build
 npm start
 
-##  Performance Testing InstructionsClone the project
+##  Performance Testing Instructions
 
 ### Run the app using npm run dev.
 
@@ -68,6 +68,17 @@ Interact with the dashboard or enable “Stress Mode” from the control panel.
 
 Observe the FPS (frames per second) and memory usage for 30–60 seconds.
 ---
+##  Browser Compatibility
+
+| Browser | Status | Notes |
+|----------|---------|-------|
+| **Google Chrome (v120+)** | ✅ | Best overall performance and optimized for V8 engine. Recommended for FPS and memory benchmarking. |
+| **Microsoft Edge (v120+)** | ✅ | Similar performance to Chrome. Stable for real-time rendering and stress testing. |
+| **Mozilla Firefox (v118+)** | ⚠️ | Slightly reduced FPS during heavy data streaming due to different JavaScript engine handling. |
+| **Apple Safari (v17+)** | ⚠️ | Minor lag in Canvas rendering; OffscreenCanvas support partially limited. |
+
+>  **Recommendation:** Use **Google Chrome** or **Microsoft Edge** for the most stable and accurate performance results.
+
 
 ## Expected Results:
 
@@ -112,6 +123,7 @@ Enable persistent caching with Service Workers
 Integrate WebSocket streaming for live IoT data
 
 Add testing with Jest and React Testing Library
+
 
 
 
