@@ -82,6 +82,26 @@ Observe the FPS (frames per second) and memory usage for 30–60 seconds.
 
 ## Expected Results:
 <img width="1906" height="874" alt="image" src="https://github.com/user-attachments/assets/3efb5a95-09b4-4c31-a465-ffa67982359e" />
+## Line Chart (High-Frequency Stream)
+
+The high-frequency line chart processes ~2,500 streaming points in real time with 0.36 ms render time and perfect 60 FPS, validating the dashboard’s responsive architecture.
+<img width="1905" height="874" alt="image" src="https://github.com/user-attachments/assets/dfe2020d-f682-4907-9d30-0e892228d3bf" />
+## Bar Chart (Medium Load)
+
+The bar chart visualization runs smoothly with around 10,000 data points, keeping 60 FPS and quick render times (0.13 ms) during real-time streaming updates.
+<img width="1912" height="863" alt="image" src="https://github.com/user-attachments/assets/eef88447-f895-4d37-bcac-bf15901dda53" />
+## Scatter Plot (Stress Test Mode)
+
+The scatter plot efficiently handles a 50,000-point stress load, maintaining ~51 average FPS and stable memory usage (~53 MB) without frame drops or rendering lag.
+<img width="1912" height="867" alt="image" src="https://github.com/user-attachments/assets/35a54825-e55b-40ad-a9ce-bae82700f04b" />
+## Line Chart (Aggregated - 5 Minute View)
+
+The line chart under 5-minute aggregation mode shows optimized rendering with minimal data points, achieving instant updates (0.19 ms render time) and constant 60 FPS.
+<img width="1918" height="865" alt="image" src="https://github.com/user-attachments/assets/5d8b407d-d58d-4438-8bb0-48c207873393" />
+## Heatmap View — Real-Time Streaming
+
+The heatmap visualization efficiently renders over 15,000 live data points at a steady 60 FPS, demonstrating stable real-time streaming and smooth color mapping performance
+
 
 1) Maintain ~60 FPS during real-time updates
 
@@ -124,6 +144,7 @@ Enable persistent caching with Service Workers
 Integrate WebSocket streaming for live IoT data
 
 Add testing with Jest and React Testing Library
+
 
 
 
