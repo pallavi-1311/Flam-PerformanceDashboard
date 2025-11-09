@@ -1,14 +1,14 @@
-readme
-# 🚀 Performance-Critical Data Visualization Dashboard
+
+#  Performance-Critical Data Visualization Dashboard
 
 A high-performance **real-time data visualization dashboard** built using **Next.js 14 (App Router) + TypeScript**.  
 It can smoothly render and update **10,000+ data points at 60 FPS**, optimized for **low-latency streaming**, **interactive charts**, and **efficient resource usage**.
 
 ---
 
-## 📊 Features
+##  Features
 
-### 🔹 Core Functionalities
+###  Core Functionalities
 - **Multiple Chart Types:** Line, Bar, Scatter, and Heatmap  
 - **Real-time Updates:** New data points generated every 100ms  
 - **Interactive Controls:** Zoom, Pan, Data Filtering, and Time Range Selection  
@@ -16,15 +16,15 @@ It can smoothly render and update **10,000+ data points at 60 FPS**, optimized f
 - **Virtual Scrolling:** Efficient rendering for large data tables  
 - **Responsive Design:** Optimized for desktop, tablet, and mobile  
 
-### 🔹 Performance Targets
-- 🏎 60 FPS rendering even with 10,000+ points  
-- ⚡ <100ms user interaction latency  
-- 💾 Stable memory usage with continuous streaming  
-- 🔄 Efficient use of `Web Workers` for data generation  
+###  Performance Targets
+- 60 FPS rendering even with 10,000+ points  
+- <100ms user interaction latency  
+- Stable memory usage with continuous streaming  
+- Efficient use of `Web Workers` for data generation  
 
 ---
 
-## 🧠 Technical Stack
+##  Technical Stack
 
 | Layer | Technology Used |
 |-------|------------------|
@@ -38,7 +38,7 @@ It can smoothly render and update **10,000+ data points at 60 FPS**, optimized f
 
 ---
 
-## ⚙️ Setup & Installation
+##  Setup & Installation
 
 ### 1 Clone the project
 
@@ -56,7 +56,7 @@ npm run dev
 npm run build
 npm start
 ---
-## 🧪 Performance Testing InstructionsClone the projec
+##  Performance Testing InstructionsClone the projec
 
 ### Run the app using npm run dev.
 
@@ -67,27 +67,28 @@ Go to DevTools → Performance Tab → Record.
 Interact with the dashboard or enable “Stress Mode” from the control panel.
 
 Observe the FPS (frames per second) and memory usage for 30–60 seconds.
+---
 
 ## Expected Results:
 
-1 Maintain ~60 FPS during real-time updates
+1) Maintain ~60 FPS during real-time updates
 
-2 Memory usage below 250 MB during extended runs
+2) Memory usage below 250 MB during extended runs
 ---
 
 ## Advanced Next.js Features Implemented
 
-1 Streaming UI with Suspense boundaries
+1) Streaming UI with Suspense boundaries
 
-2 Server Actions for data updates
+2) Server Actions for data updates
 
-3 Edge Middleware for caching and route optimization
+3) Edge Middleware for caching and route optimization
 
-4 Static Generation for chart configuration
+4) Static Generation for chart configuration
 
-5 Route Handlers under /api/data/
+5) Route Handlers under /api/data/
 
-6 Web Workers for async data processing
+ 6) Web Workers for async data processing
 ---
 
 ### Optimization Techniques
@@ -111,6 +112,7 @@ Enable persistent caching with Service Workers
 Integrate WebSocket streaming for live IoT data
 
 Add testing with Jest and React Testing Library
+
 
 
 
